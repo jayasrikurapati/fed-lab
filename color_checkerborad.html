@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>color board</title>
+	<style>
+		body {
+			text-align: center;
+		}
+
+		.cell {
+			height: 30px;
+			width: 30px;
+			border: 1.5px solid grey;
+			border-style: inset;
+		}
+
+		.lightorangecell {
+			background-color: #FED8B1;
+		}
+
+		.pinkcell {
+			background-color: #FFC0CB;
+		}
+        .darkorangecell{
+            background-color:#FF8C00;
+        }
+
+	</style>
+</head>
+
+<body>
+	<span style="color:green; font-size:30px;">
+		color checker board
+	</span>
+	<br><br>
+
+	<script type="text/javascript">
+
+		
+		var center = document.createElement('center');
+
+		
+		var table = document.createElement('table');
+		for (var i = 0; i < 6; i++) {
+
+			
+			var tr = document.createElement('tr');
+			for (var j = 0; j < 6; j++) {
+
+				
+				var td = document.createElement('td');
+
+				
+				if ((i + j)==0 || (i + j)==3 ||(i + j)==6 ||(i + j)==9){
+
+					
+					td.setAttribute('class', 'cell lightorangecell');
+					tr.appendChild(td);
+				}
+
+				
+				else if ((i + j)==1 ||(i + j)==4 ||(i + j)==7 || (i + j)==10){
+
+					
+					td.setAttribute('class', 'cell pinkcell');
+					tr.appendChild(td);
+				}
+                else{
+                    td.setAttribute('class','cell darkorangecell');
+                    tr.appendChild(td);
+                }
+			}
+
+			
+			table.appendChild(tr);
+		}
+		center.appendChild(table);
+
+		
+		table.setAttribute('cellspacing', '0');
+		table.setAttribute('width', '270px');
+		document.body.appendChild(center);
+	</script>
+</body>
+
+</html>
+
