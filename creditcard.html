@@ -1,0 +1,26 @@
+<html>
+  <body>
+    <form id = "form1">
+      Input: <input id = "input1" type = "text" />
+    </form>
+    <button onclick = "cardnum()">
+      click here
+      </button><script>
+function cardnum()
+{
+  var input = document.getElementById('input1');	
+  var cardno = /^(?:3[47][0-9]{13})$/;
+var val=input.value;
+  if(cardno.test(val))
+        {
+      return true;
+        }
+      else
+        {
+        alert("Not a valid Amercican Express credit card number!");
+        return false;
+        }
+}
+</script>
+</body>
+</html>

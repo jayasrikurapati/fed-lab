@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+
+<body id = "body" align = "center">
+
+	
+	<form id = "form1">
+		Input: <input id = "input1" type = "text" />
+	</form>
+	<button onclick = "alphanumeric()">
+		click here
+    </button>
+	
+	<script>
+		var input = document.getElementById('input1');	
+		
+		function alphanumeric() {
+			var val = input.value;
+			var RegEx = /^[a-z0-9]+$/;
+			if(RegEx.test(val)){
+                document.write('true');
+            }
+            else{
+                document.write(' not valid');
+            }
+			
+		}
+	</script>
+</body>
+
+</html>
